@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'join'
+    'rest_framework.authtoken',
+    'join_app',
 ]
 
 MIDDLEWARE = [
@@ -55,9 +56,7 @@ MIDDLEWARE = [
 CSRF_TRUSTED_ORIGINS = [
 
   'http://127.0.0.1:4200',
-
   'http://localhost:4200',
-
 ]
 
 
@@ -65,9 +64,7 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ALLOWED_ORIGINS = [
 
   'http://127.0.0.1:4200',
-
   'http://localhost:4200',
-
 ]
 
 ROOT_URLCONF = 'backend_join.urls'
@@ -142,3 +139,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
