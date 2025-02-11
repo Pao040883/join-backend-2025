@@ -117,9 +117,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ["id", "email", "first_name", "last_name"]  
         
     def update(self, instance, validated_data):
-        """
-        Speichert die aktualisierten Benutzerdaten.
-        """
         instance.first_name = validated_data.get("first_name", instance.first_name)
         instance.last_name = validated_data.get("last_name", instance.last_name)
         instance.email = validated_data.get("email", instance.email)
