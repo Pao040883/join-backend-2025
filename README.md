@@ -12,8 +12,8 @@ Backend Django
 2️⃣ Virtuelle Umgebung erstellen & aktivieren
 
     python -m venv env
-    source env/bin/activate  # macOS/Linux
-    env\Scripts\activate      # Windows
+    source "env/bin/activate"  # macOS/Linux
+    "env\Scripts\activate"      # Windows
 
 3️⃣ Abhängigkeiten installieren
 
