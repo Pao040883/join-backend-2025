@@ -6,7 +6,7 @@ Backend Django
 
 1️⃣ Projekt klonen
 
-    git clone https://github.com/dein-github-username/join-backend-2025.git
+    git clone https://github.com/Pao040883/join-backend-2025.git
     cd join-backend-2025
 
 2️⃣ Virtuelle Umgebung erstellen & aktivieren
